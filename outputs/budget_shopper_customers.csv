@@ -1,0 +1,5 @@
+CustomerID,Recency,Frequency,Monetary,Cluster,Segment
+14646.0,3,28,87617.39,3,Budget Shopper
+14911.0,1,75,59175.7,3,Budget Shopper
+16446.0,90,1,168469.6,3,Budget Shopper
+18102.0,90,29,135953.04,3,Budget Shopper

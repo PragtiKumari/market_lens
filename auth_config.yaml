@@ -1,0 +1,15 @@
+credentials:
+  usernames:
+    user1:
+      email: user1@example.com
+      name: User One
+      password: '123'  # This will be hashed automatically if you want
+
+cookie:
+  expiry_days: 1
+  key: "your_signature_key"
+  name: "marketlens_cookie"
+
+preauthorized:
+  emails:
+    - user1@example.com
