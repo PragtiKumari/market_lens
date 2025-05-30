@@ -407,7 +407,7 @@ st.markdown("---")
 st.markdown("""
     <div style="text-align:center;">
         <h4>MarketLens • All-in-One Market & Sales Research Dashboard • 2025</h4>
-        <p>💖 Built by Pragati Kumari 💖</p>
+        <p> Built by Pragati Kumari </p>
     </div>
 """, unsafe_allow_html=True)
 
