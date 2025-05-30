@@ -2,6 +2,10 @@
 MarketLens is a powerful data analytics dashboard designed to provide deep insights into customer behavior, market trends, and business performance. This project integrates multiple advanced analytics modules into one cohesive platform for small businesses to make smarter, data-driven decisions.
 
 
+👉 Live display of the app 👈:-
+https://market-lens.streamlit.app/
+
+
 🎯 Key Features :-
 1. Customer Segmentation using clustering to identify key audience groups.
 
