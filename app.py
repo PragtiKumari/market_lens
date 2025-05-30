@@ -8,6 +8,32 @@ import json
 from io import BytesIO
 from PIL import Image
 
+
+# ✅ Load image from 'figures' folder using absolute path
+def load_figure(filename):
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(BASE_DIR, 'figures', filename)
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Figure '{filename}' not found at {path}")
+    return Image.open(path)
+
+# ✅ Show figure with caption & fallback warning
+def show_figure(filename, caption=""):
+    try:
+        image = load_figure(filename)
+        st.image(image, caption=caption, use_column_width=True)
+    except FileNotFoundError as e:
+        st.warning(f"⚠️ {e}")
+
+
+st.subheader()
+show_figure("figure_1.png", "Sales Forecasting")
+show_figure("figure_2.png", "Customer Segmentation")
+show_figure("figure_3.png", "Price Sensitivity")
+show_figure("figure_4.png", "CLV Prediction")
+
+
+
 # -- Page Config --
 st.set_page_config(page_title="MarketLens Dashboard", layout="wide")
 
