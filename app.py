@@ -23,7 +23,7 @@ def show_figure(filename, caption=""):
     path = os.path.join("Figures", filename)
     if os.path.exists(path):
         image = Image.open(path)
-        st.image(image, caption=caption, use_column_width=True)
+        st.image(image, caption=caption, use_container_width=True)
     else:
         st.warning(f"⚠️ Figure '{filename}' not found.")
 
