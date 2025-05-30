@@ -20,7 +20,7 @@ def load_lottiefile(filepath: str):
 
 # -- Show Saved Figures --
 def show_figure(filename, caption=""):
-    path = os.path.join("figures", filename)
+    path = os.path.join("Figures", filename)
     if os.path.exists(path):
         image = Image.open(path)
         st.image(image, caption=caption, use_column_width=True)
@@ -131,7 +131,7 @@ elif page == "Sales Forecast":
             st.error(f"❌ Failed to load data: {e}")
 
     st.subheader("30-Day Forecast for ZN")
-    show_figure("figure_3.png", "ZN: 30-Day Forecast")
+    show_figure("Figure_3.png", "ZN: 30-Day Forecast")
     st.markdown("""
     <div style="font-size:16px; line-height:1.5; margin-bottom:20px;">
     This chart visualizes the 30-day sales forecast for the ZN product segment.  
@@ -140,7 +140,7 @@ elif page == "Sales Forecast":
     """, unsafe_allow_html=True)
 
     st.subheader("30-Day Forecast for SB")
-    show_figure("figure_4.png", "SB: 30-Day Forecast")
+    show_figure("Figure_4.png", "SB: 30-Day Forecast")
     st.markdown("""
     <div style="font-size:16px; line-height:1.5; margin-bottom:20px;">
     The SB forecast graph indicates how this product line’s sales are expected to change soon.  
@@ -149,7 +149,7 @@ elif page == "Sales Forecast":
     """, unsafe_allow_html=True)
 
     st.subheader("30-Day Forecast for TAX") 
-    show_figure("figure_5.png", "TAX: 30-Day Forecast")
+    show_figure("Figure_5.png", "TAX: 30-Day Forecast")
     st.markdown("""
     <div style="font-size:16px; line-height:1.5; margin-bottom:20px;">
     This forecast highlights the sales projection for TAX, crucial for budgeting and resource allocation.  
@@ -158,7 +158,7 @@ elif page == "Sales Forecast":
     """, unsafe_allow_html=True)
 
     st.subheader("30-Day Forecast for MARZA")
-    show_figure("figure_6.png", "MARZA: 30-Day Forecast")
+    show_figure("Figure_6.png", "MARZA: 30-Day Forecast")
     st.markdown("""
     <div style="font-size:16px; line-height:1.5; margin-bottom:20px;">
     The MARZA product’s predicted sales pattern is shown here, offering a window into future customer demand.  
@@ -167,7 +167,7 @@ elif page == "Sales Forecast":
     """, unsafe_allow_html=True)
 
     st.subheader("Total Sales Over Time")
-    show_figure("figure_7.png", "Total Sales Over Time")
+    show_figure("Figure_7.png", "Total Sales Over Time")
     st.markdown("""
     <div style="font-size:16px; line-height:1.5; margin-bottom:20px;">
     This figure displays the overall sales trend combining all products.  
@@ -204,7 +204,7 @@ elif page == "Customer Segmentation":
             st.error(f"❌ Failed to load data: {e}")
 
     st.subheader("Customer Segments : Recency vs Monetary")
-    show_figure("figure_2.png", "Customer Segments: Monetary vs Recency")
+    show_figure("Figure_2.png", "Customer Segments: Monetary vs Recency")
     st.markdown("""
     <div style="font-size:16px; line-height:1.5; margin-bottom:20px;">
     This plot visualizes customer segments by how recently and how much they spend.  
@@ -267,7 +267,7 @@ elif page == "Price Sensitivity":
             st.error(f"❌ Failed to load data: {e}")
 
     st.subheader("Price sensitivity (Regression)")
-    show_figure("figure_12.png", "Clicks vs Price")
+    show_figure("Figure_12.png", "Clicks vs Price")
     st.markdown("""
     <div style="font-size:16px; line-height:1.5; margin-bottom:20px;">
     This regression chart shows the relationship between product price and ad clicks.  
@@ -306,7 +306,7 @@ elif page == "Customer Lifetime Value":
     #  Showing extra figure: CLV by Segment
 
     st.subheader("Customer segments based on CLV")
-    show_figure("figure_10.png", "CLV by Segment: Comparing Average Lifetime Value Across Customer Groups")
+    show_figure("Figure_10.png", "CLV by Segment: Comparing Average Lifetime Value Across Customer Groups")
 
     st.markdown("""
     <div style="font-size:16px; line-height:1.5; margin-top:10px;">
@@ -326,7 +326,7 @@ elif page == "Customer Lifetime Value":
 # ========== AD CAMPAIGN EFFECTIVENESS ==========
 elif page == "Ad Campaign Effectiveness":
     st.header("📢 Ad Campaign Effectiveness")
-    show_figure("figure_9.png", "Feature Importance for Click Prediction")
+    show_figure("Figure_9.png", "Feature Importance for Click Prediction")
     st.markdown("""
     <div style="font-size:16px; line-height:1.5; margin-bottom:20px;">
     This figure shows which features (like user age, device type, ad position and other factors) most influence whether an ad gets clicked.  
